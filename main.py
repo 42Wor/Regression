@@ -1,7 +1,7 @@
 import pandas
 import matplotlib.pyplot as plt
 
-d = pandas.read_csv("House Price India.csv")
+d = pandas.read_csv("data/House Price India.csv")
 
 # print(d.head())
 # print(d.info())
