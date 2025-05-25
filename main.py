@@ -12,7 +12,8 @@ d = pandas.read_csv("data/House Price India.csv")
 # print(d.isna().sum().sum())
 # print(d.duplicated().sum())
 # print(d.groupby("condition of the house")["Price"].mean().reset_index().sort_values("Price", ascending=False))
-'''M=d.groupby("condition of the house")["Price"].mean().reset_index().sort_values("Price", ascending=False)
+
+M=d.groupby("condition of the house")["Price"].mean().reset_index().sort_values("Price", ascending=False)
 plt.bar(M["condition of the house"], M["Price"])
 plt.xlabel("Condition of the House")
 plt.ylabel("Average Price")
@@ -20,7 +21,7 @@ plt.title("Average House Price by Condition")
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
-'''
+
 x = d[['Date',
        'number of bedrooms',
        'number of bathrooms',
@@ -66,17 +67,21 @@ predicted_price = lr.predict(new_data)
 print("Predicted Price:", predicted_price[0][0])
 
 
-'''print(t)
+#print(t)
 
 # Plotting a heatmap of correlations
 import seaborn as sns
-plt.figure(figsize=(10, 8))
-sns.heatmap(t.corr(), annot=True, cmap="coolwarm")
-plt.title("Correlation Heatmap")
+
+plt.figure(figsize=(12, 10))
+sns.heatmap(t.corr(), annot=True, fmt=".2f", cmap="coolwarm", linewidths=0.5, cbar_kws={"shrink": 0.8})
+plt.title("Correlation Heatmap", fontsize=16)
+plt.xticks(rotation=45, ha="right")
+plt.yticks(rotation=0)
+plt.tight_layout()
 plt.show()
 
 # Plotting histograms for each feature
 t.hist(bins=20, figsize=(15, 10))
 plt.tight_layout()
 plt.show()
-'''
+
