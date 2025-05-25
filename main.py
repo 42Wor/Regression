@@ -54,19 +54,6 @@ from sklearn.linear_model import LinearRegression
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 t = x_train.join(y_train)
-
-# Fit Linear Regression model
-lr = LinearRegression()
-lr.fit(x_train, y_train)
-
-# Print model score
-print("Linear Regression R^2 score:", lr.score(x_test, y_test))
-
-new_data = [[42491, 3, 2, 1500, 2000, 1, 0, 0, 3, 7, 1500, 0, 2000, 0, 122004, 52.9, -114.5, 1500, 2000, 2, 10]]
-predicted_price = lr.predict(new_data)
-print("Predicted Price:", predicted_price[0][0])
-
-
 #print(t)
 
 # Plotting a heatmap of correlations
@@ -84,4 +71,17 @@ plt.show()
 t.hist(bins=20, figsize=(15, 10))
 plt.tight_layout()
 plt.show()
+
+
+# Fit Linear Regression model
+lr = LinearRegression()
+lr.fit(x_train, y_train)
+
+# Print model score
+print("Linear Regression R^2 score:", lr.score(x_test, y_test))
+
+new_data = [[42491, 3, 2, 1500, 2000, 1, 0, 0, 3, 7, 1500, 0, 2000, 0, 122004, 52.9, -114.5, 1500, 2000, 2, 10]]
+predicted_price = lr.predict(new_data)
+print("Predicted Price:", predicted_price[0][0])
+
 
