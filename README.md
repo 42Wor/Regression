@@ -16,6 +16,15 @@ Linear Regression is a statistical method used for modeling the relationship bet
 *   **Matplotlib / Seaborn:** (If used) For plotting and visualization.
 *   **Scikit-learn:** (If used for comparison, dataset splitting, or metrics)
 
+## 📂 Project Structure
+
+The project is organized as follows:
+
+- `MY_RLS.py`: Custom implementation of Linear Regression from scratch.
+- `skl.py`: Linear Regression using scikit-learn for comparison.
+- `data/`: Directory to store datasets (e.g., `House Price India.csv`).
+- `requirements.txt`: List of required Python packages.
+
 ## 🚀 Getting Started
 
 ### Prerequisites
