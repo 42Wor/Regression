@@ -41,4 +41,4 @@ print("Linear Regression R^2 score:", mlr.score(x_test, y_test))
 
 new_data = [[42491, 3, 2, 1500, 2000, 1, 0, 0, 3, 7, 1500, 0, 2000, 0, 122004, 52.9, -114.5, 1500, 2000, 2, 10]]
 predicted_price = mlr.predict(new_data)
-print("Predicted Price:", predicted_price[0][0])
+print("Predicted Price:", predicted_price[0])
