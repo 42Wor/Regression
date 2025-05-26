@@ -46,7 +46,7 @@ x = d[['Date',
 y = d[["Price"]]
 #print(x.head())
 print("--"*25,"X data","--"*25)
-print("X data",x.info())
+print(x.info())
 print("--"*25,"y data","--"*25)
 print(y.info())
 from sklearn.model_selection import train_test_split
